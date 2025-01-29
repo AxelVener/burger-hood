@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BURGER HOOD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            background-color: #e2c109e1;
+            color: #000000;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #000000;
+            border: 1px solid #e2c109e1;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            justify-content: space-between;
+            height: 500px;
+        }
+
+        .product img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .product h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: #e2c109e1;
+        }
+
+        .product span {
+            color: #e2c109e1;
+            font-size: 0.8rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .btn {
+            background-color: #e2c109e1;
+            color: #000000;
+            border: none;
+            padding: 0.6rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn:hover {
+            background-color: #FFC300;
+        }
+
+        .product .product-count {
+            background-color: #e2c109e1;
+            color: #000000;
+            padding: 0.3rem;
+            border-radius: 50%;
+            font-size: 1rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 25px;
+            height: 25px;
+            margin-top: 0.5rem;
+        }
+
+        .counter-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+
+        .counter-controls button {
+            background-color: #e2c109e1;
+            color: #000000;
+            border: none;
+            padding: 0.3rem 0.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            margin: 0 0.5rem;
+            font-weight: bold;
+        }
+
+        .counter-controls button:hover {
+            background-color: #FFC300;
+        }
+
+        .counter-controls button:disabled {
+            background-color: #d3d3d3;
+            cursor: not-allowed;
+        }
+
+        .cart {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #000000;
+            border: 1px solid #e2c109e1;
+            border-radius: 8px;
+        }
+
+        .cart h2 {
+            color: #e2c109e1;
+        }
+
+        .cart-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-info span {
+            font-weight: bold;
+            color: #e2c109e1;
+        }
+
+        .cart .item-count {
+            background-color: #e2c109e1;
+            color: #000000;
+            padding: 0.4rem;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            font-weight: bold;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #cart-items li {
+            color: #e2c109e1;
+        }
+
+        #cart-total,
+        #cart-total-text {
+            color: #e2c109e1;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .product img {
+                width: 260px;
+                height: 260px;
+            }
+
+            .product .product-count {
+                width: 25px;
+                height: 25px;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+
+            .counter-controls button {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product img {
+                width: 280px;
+                height: 280px;
+            }
+
+            .product .product-count {
+                width: 25px;
+                height: 25px;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>BURGER HOOD</h1>
+    </header>
+    <div class="container">
+        <h2>Menú</h2>
+        <div id="product-list">
+            <div class="product">
+                <h3>Hamburguesa Clásica</h3>
+                <img src="../imagenes/burger.jpg" alt="Hamburguesa Clásica">
+                <span>$5.00</span>
+                <button class="btn" onclick="addToCart('Hamburguesa Clásica', 5, 'counter-classic')">Añadir al carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Hamburguesa Clásica', -1, 'counter-classic')" id="minus-classic">-</button>
+                    <span id="counter-classic" class="product-count">0</span>
+                    <button onclick="updateQuantity('Hamburguesa Clásica', 1, 'counter-classic')" id="plus-classic">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>Hamburguesa Doble</h3>
+                <img src="../imagenes/burger.jpg" alt="Hamburguesa Doble">
+                <span>$7.00</span>
+                <button class="btn" onclick="addToCart('Hamburguesa Doble', 7, 'counter-double')">Añadir al carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Hamburguesa Doble', -1, 'counter-double')" id="minus-double">-</button>
+                    <span id="counter-double" class="product-count">0</span>
+                    <button onclick="updateQuantity('Hamburguesa Doble', 1, 'counter-double')" id="plus-double">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>Papas Fritas</h3>
+                <img src="../imagenes/papas.jpeg" alt="Papas Fritas">
+                <span>$3.00</span>
+                <button class="btn" onclick="addToCart('Papas Fritas', 3, 'counter-fries')">Añadir al carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Papas Fritas', -1, 'counter-fries')" id="minus-fries">-</button>
+                    <span id="counter-fries" class="product-count">0</span>
+                    <button onclick="updateQuantity('Papas Fritas', 1, 'counter-fries')" id="plus-fries">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart">
+            <h2>Carrito</h2>
+            <div class="cart-info">
+                <span>Artículos en el carrito:</span>
+                <span id="item-count" class="item-count">0</span>
+            </div>
+            <ul id="cart-items"></ul>
+            <p id="cart-total-text">Total: $<span id="cart-total">0.00</span></p>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+
+        function addToCart(productName, price, counterId) {
+            const productIndex = cart.findIndex(item => item.name === productName);
+
+            if (productIndex !== -1) {
+                cart[productIndex].quantity++;
+            } else {
+                cart.push({ name: productName, price: price, quantity: 1 });
+            }
+
+            const counterElement = document.getElementById(counterId);
+            counterElement.textContent = cart[productIndex !== -1 ? productIndex : cart.length - 1].quantity;
+
+            // Actualizar carrito
+            updateCartSummary();
+        }
+
+        function updateQuantity(productName, quantityChange, counterId) {
+            const productIndex = cart.findIndex(item => item.name === productName);
+            if (productIndex !== -1) {
+                // Actualizar cantidad de productos y evitar valores negativos
+                const newQuantity = cart[productIndex].quantity + quantityChange;
+                if (newQuantity >= 0) {
+                    cart[productIndex].quantity = newQuantity;
+                    const counterElement = document.getElementById(counterId);
+                    counterElement.textContent = cart[productIndex].quantity;
+                    updateCartSummary();
+                }
+            }
+        }
+
+        function updateCartSummary() {
+            let itemCount = 0;
+            let totalAmount = 0;
+
+            cart.forEach(item => {
+                itemCount += item.quantity;
+                totalAmount += item.price * item.quantity;
+            });
+
+            document.getElementById('item-count').textContent = itemCount;
+            document.getElementById('cart-total').textContent = totalAmount.toFixed(2);
+
+            const cartItemsList = document.getElementById('cart-items');
+            cartItemsList.innerHTML = '';
+            cart.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.name} x${item.quantity} - $${(item.price * item.quantity).toFixed(2)}`;
+                cartItemsList.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+
+</html>
