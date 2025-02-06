@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
     <title>BURGER HOOD</title>
     <style>
         body {
@@ -208,38 +209,267 @@
         <h2>Menú</h2>
         <div id="product-list">
             <div class="product">
-                <h3>Hamburguesa Clásica</h3>
-                <img src="imagenes/burger.jpg" alt="Hamburguesa Clásica">
-                <span>$5.00</span>
-                <button class="btn" onclick="addToCart('Hamburguesa Clásica', 5, 'counter-classic')">Añadir al carrito</button>
+                <h3>Hamburguesa del mes</h3>
+                <img src="imagenes/Philly.jpg" alt="Hamburguesa del mes">
+                <span>$400</span>
+                <button class="btn" onclick="addToCart('Hamburguesa del mes', 400, 'counter-fries')">Añadir al
+                    carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Hamburguesa Clásica', -1, 'counter-classic')" id="minus-classic">-</button>
-                    <span id="counter-classic" class="product-count">0</span>
-                    <button onclick="updateQuantity('Hamburguesa Clásica', 1, 'counter-classic')" id="plus-classic">+</button>
-                </div>
-            </div>
-            <div class="product">
-                <h3>Hamburguesa Doble</h3>
-                <img src="imagenes/burger.jpg" alt="Hamburguesa Doble">
-                <span>$7.00</span>
-                <button class="btn" onclick="addToCart('Hamburguesa Doble', 7, 'counter-double')">Añadir al carrito</button>
-                <div class="counter-controls">
-                    <button onclick="updateQuantity('Hamburguesa Doble', -1, 'counter-double')" id="minus-double">-</button>
-                    <span id="counter-double" class="product-count">0</span>
-                    <button onclick="updateQuantity('Hamburguesa Doble', 1, 'counter-double')" id="plus-double">+</button>
-                </div>
-            </div>
-            <div class="product">
-                <h3>Papas Fritas</h3>
-                <img src="imagenes/papas.jpeg" alt="Papas Fritas">
-                <span>$3.00</span>
-                <button class="btn" onclick="addToCart('Papas Fritas', 3, 'counter-fries')">Añadir al carrito</button>
-                <div class="counter-controls">
-                    <button onclick="updateQuantity('Papas Fritas', -1, 'counter-fries')" id="minus-fries">-</button>
+                    <button onclick="updateQuantity('Hamburguesa del mes', -1, 'counter-fries')"
+                        id="minus-fries">-</button>
                     <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('Papas Fritas', 1, 'counter-fries')" id="plus-fries">+</button>
+                    <button onclick="updateQuantity('Hamburguesa del mes', 1, 'counter-fries')"
+                        id="plus-fries">+</button>
                 </div>
             </div>
+            <div class="product">
+                <h3>Hood</h3>
+                <img src="imagenes/hood2.jpg" alt="Hood">
+                <span>$340</span>
+                <button class="btn" onclick="addToCart('Hood', 340, 'counter-classic')">Añadir al carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Hood', -1, 'counter-classic')" id="minus-classic">-</button>
+                    <span id="counter-classic" class="product-count">0</span>
+                    <button onclick="updateQuantity('Hood', 1, 'counter-classic')" id="plus-classic">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>Yankee</h3>
+                <img src="imagenes/Yankee.jpg" alt="Yankee">
+                <span>$320</span>
+                <button class="btn" onclick="addToCart('Yankee', 320, 'counter-double')">Añadir al carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Yankee', -1, 'counter-double')" id="minus-double">-</button>
+                    <span id="counter-double" class="product-count">0</span>
+                    <button onclick="updateQuantity('Yankee', 1, 'counter-double')" id="plus-double">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>A & C</h3>
+                <img src="imagenes/Ayc.jpg" alt="A & C">
+                <span>$310</span>
+                <button class="btn" onclick="addToCart('A & C', 310, 'counter-fries')">Añadir al carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('A & C', -1, 'counter-fries')" id="minus-fries">-</button>
+                    <span id="counter-fries" class="product-count">0</span>
+                    <button onclick="updateQuantity('A & C', 1, 'counter-fries')" id="plus-fries">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>Cheese</h3>
+                <img src="imagenes/ChesseBurger.jpg" alt="Cheese">
+                <span>$330</span>
+                <button class="btn" onclick="addToCart('Cheese', 330, 'counter-fries')">Añadir al carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Cheese', -1, 'counter-fries')" id="minus-fries">-</button>
+                    <span id="counter-fries" class="product-count">0</span>
+                    <button onclick="updateQuantity('Cheese', 1, 'counter-fries')" id="plus-fries">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>Oklahoma</h3>
+                <img src="imagenes/oklahoma-2.jpg" alt="Oklahoma">
+                <span>$400</span>
+                <button class="btn" onclick="addToCart('Oklahoma', 400, 'counter-fries')">Añadir al carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Oklahoma', -1, 'counter-fries')" id="minus-fries">-</button>
+                    <span id="counter-fries" class="product-count">0</span>
+                    <button onclick="updateQuantity('Oklahoma', 1, 'counter-fries')" id="plus-fries">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>Monster</h3>
+                <img src="imagenes/Monster.jpg" alt="Monster">
+                <span>$380</span>
+                <button class="btn" onclick="addToCart('Monster', 380, 'counter-fries')">Añadir al carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Monster', -1, 'counter-fries')" id="minus-fries">-</button>
+                    <span id="counter-fries" class="product-count">0</span>
+                    <button onclick="updateQuantity('Monster', 1, 'counter-fries')" id="plus-fries">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>Patty Melt</h3>
+                <img src="imagenes/Patty.jpg" alt="Papas Fritas">
+                <span>$420</span>
+                <button class="btn" onclick="addToCart('Patty Melt', 420, 'counter-fries')">Añadir al carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Patty Melt', -1, 'counter-fries')" id="minus-fries">-</button>
+                    <span id="counter-fries" class="product-count">0</span>
+                    <button onclick="updateQuantity('Patty Melt', 1, 'counter-fries')" id="plus-fries">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>Pulled Pork</h3>
+                <img src="imagenes/pulled-1.jpg" alt="Pulled Pork">
+                <span>$280</span>
+                <button class="btn" onclick="addToCart('Pulled Pork', 280, 'counter-fries')">Añadir al carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Pulled Pork', -1, 'counter-fries')" id="minus-fries">-</button>
+                    <span id="counter-fries" class="product-count">0</span>
+                    <button onclick="updateQuantity('Pulled Pork', 1, 'counter-fries')" id="plus-fries">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>Hueverly</h3>
+                <img src="imagenes/Hueverly-2.jpg" alt="Hueverly">
+                <span>$380</span>
+                <button class="btn" onclick="addToCart('Hueverly', 380, 'counter-fries')">Añadir al carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Hueverly', -1, 'counter-fries')" id="minus-fries">-</button>
+                    <span id="counter-fries" class="product-count">0</span>
+                    <button onclick="updateQuantity('Hueverly', 1, 'counter-fries')" id="plus-fries">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>Red Hot</h3>
+                <img src="imagenes/papas.jpeg" alt="Red Hot">
+                <span>$310</span>
+                <button class="btn" onclick="addToCart('Red Hot', 310, 'counter-fries')">Añadir al carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Red Hot', -1, 'counter-fries')" id="minus-fries">-</button>
+                    <span id="counter-fries" class="product-count">0</span>
+                    <button onclick="updateQuantity('Red Hot', 1, 'counter-fries')" id="plus-fries">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>West</h3>
+                <img src="imagenes/West.jpeg" alt="West">
+                <span>$350</span>
+                <button class="btn" onclick="addToCart('West', 350, 'counter-fries')">Añadir al carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('West', -1, 'counter-fries')" id="minus-fries">-</button>
+                    <span id="counter-fries" class="product-count">0</span>
+                    <button onclick="updateQuantity('West', 1, 'counter-fries')" id="plus-fries">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>Veggie</h3>
+                <img src="imagenes/veggie.jpg" alt="Veggie">
+                <span>$270</span>
+                <button class="btn" onclick="addToCart('Veggie', 270, 'counter-fries')">Añadir al carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Veggie', -1, 'counter-fries')" id="minus-fries">-</button>
+                    <span id="counter-fries" class="product-count">0</span>
+                    <button onclick="updateQuantity('Veggie', 1, 'counter-fries')" id="plus-fries">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>Kid</h3>
+                <img src="imagenes/Kid.jpg" alt="Kid">
+                <span>$220</span>
+                <button class="btn" onclick="addToCart('Kid', 220, 'counter-fries')">Añadir al carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Kid', -1, 'counter-fries')" id="minus-fries">-</button>
+                    <span id="counter-fries" class="product-count">0</span>
+                    <button onclick="updateQuantity('Kid', 1, 'counter-fries')" id="plus-fries">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>Papas Chicas</h3>
+                <img src="imagenes/papas.jpeg" alt="Papas Chicas">
+                <span>$75</span>
+                <button class="btn" onclick="addToCart('Papas Chicas', 75, 'counter-fries')">Añadir al carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Papas Chicas', -1, 'counter-fries')" id="minus-fries">-</button>
+                    <span id="counter-fries" class="product-count">0</span>
+                    <button onclick="updateQuantity('Papas Chicas', 1, 'counter-fries')" id="plus-fries">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>Papas Grandes</h3>
+                <img src="imagenes/papas.jpeg" alt="Papas Grandes">
+                <span>$180</span>
+                <button class="btn" onclick="addToCart('Papas Grandes', 180, 'counter-fries')">Añadir al
+                    carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Papas Grandes', -1, 'counter-fries')" id="minus-fries">-</button>
+                    <span id="counter-fries" class="product-count">0</span>
+                    <button onclick="updateQuantity('Papas Grandes', 1, 'counter-fries')" id="plus-fries">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>Papas Cheddar</h3>
+                <img src="imagenes/Papas-cheddar.jpg" alt="Papas Cheddar">
+                <span>$280</span>
+                <button class="btn" onclick="addToCart('Papas Cheddar', 280, 'counter-fries')">Añadir al
+                    carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Papas Cheddar', -1, 'counter-fries')" id="minus-fries">-</button>
+                    <span id="counter-fries" class="product-count">0</span>
+                    <button onclick="updateQuantity('Papas Cheddar', 1, 'counter-fries')" id="plus-fries">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>Papas Bunker</h3>
+                <img src="imagenes/papas-bunker.jpg" alt="Papas Bunker">
+                <span>$320</span>
+                <button class="btn" onclick="addToCart('Papas Bunker', 320, 'counter-fries')">Añadir al carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Papas Bunker', -1, 'counter-fries')" id="minus-fries">-</button>
+                    <span id="counter-fries" class="product-count">0</span>
+                    <button onclick="updateQuantity('Papas Bunker', 1, 'counter-fries')" id="plus-fries">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>Papas Pulled</h3>
+                <img src="imagenes/pulled-1.jpg" alt="Papas Pulled">
+                <span>$280</span>
+                <button class="btn" onclick="addToCart('Papas Pulled', 280, 'counter-fries')">Añadir al carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Papas Pulled', -1, 'counter-fries')" id="minus-fries">-</button>
+                    <span id="counter-fries" class="product-count">0</span>
+                    <button onclick="updateQuantity('Papas Pulled', 1, 'counter-fries')" id="plus-fries">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>Combo Chill</h3>
+                <img src="imagenes/Combo1.jpg" alt="Combo Chill">
+                <span>$799</span>
+                <button class="btn" onclick="addToCart('Combo Chill', 799, 'counter-fries')">Añadir al carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Combo Chill', -1, 'counter-fries')" id="minus-fries">-</button>
+                    <span id="counter-fries" class="product-count">0</span>
+                    <button onclick="updateQuantity('Combo Chill', 1, 'counter-fries')" id="plus-fries">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>Combo Boom</h3>
+                <img src="imagenes/Combo2.jpg" alt="Combo Boom">
+                <span>$999</span>
+                <button class="btn" onclick="addToCart('Combo Boom', 999, 'counter-fries')">Añadir al carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Combo Boom', -1, 'counter-fries')" id="minus-fries">-</button>
+                    <span id="counter-fries" class="product-count">0</span>
+                    <button onclick="updateQuantity('Combo Boom', 1, 'counter-fries')" id="plus-fries">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>Refresco 600ml</h3>
+                <img src="imagenes/papas.jpeg" alt="Refresco 600ml">
+                <span>$120</span>
+                <button class="btn" onclick="addToCart('Refresco 600ml', 120, 'counter-fries')">Añadir al
+                    carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Refresco 600ml', -1, 'counter-fries')" id="minus-fries">-</button>
+                    <span id="counter-fries" class="product-count">0</span>
+                    <button onclick="updateQuantity('Refresco 600ml', 1, 'counter-fries')" id="plus-fries">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <h3>Cerveza Artesanal</h3>
+                <img src="imagenes/papas.jpeg" alt="Cerveza Artesanal">
+                <span>$180</span>
+                <button class="btn" onclick="addToCart('Cerveza Artesanal', 180, 'counter-fries')">Añadir al
+                    carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Cerveza Artesanal', -1, 'counter-fries')"
+                        id="minus-fries">-</button>
+                    <span id="counter-fries" class="product-count">0</span>
+                    <button onclick="updateQuantity('Cerveza Artesanal', 1, 'counter-fries')" id="plus-fries">+</button>
+                </div>
+            </div>
+
         </div>
 
         <div class="cart">
