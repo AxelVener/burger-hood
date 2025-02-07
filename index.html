@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>BURGER HOOD</title>
     <style>
         body {
@@ -206,31 +205,40 @@
         <h1>BURGER HOOD</h1>
     </header>
     <div class="container">
+        <div class="cart">
+            <h2>Carrito</h2>
+            <div class="cart-info">
+                <span>Artículos en el carrito:</span>
+                <span id="item-count" class="item-count">0</span>
+            </div>
+            <ul id="cart-items"></ul>
+            <p id="cart-total-text">Total: $<span id="cart-total">0.00</span></p>
+        </div>
         <h2>Menú</h2>
         <div id="product-list">
             <div class="product">
                 <h3>Hamburguesa del mes</h3>
                 <img src="imagenes/Philly.jpg" alt="Hamburguesa del mes">
                 <span>$400</span>
-                <button class="btn" onclick="addToCart('Hamburguesa del mes', 400, 'counter-fries')">Añadir al
+                <button class="btn" onclick="addToCart('Hamburguesa del mes', 400, 'counter-mes')">Añadir al
                     carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Hamburguesa del mes', -1, 'counter-fries')"
-                        id="minus-fries">-</button>
-                    <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('Hamburguesa del mes', 1, 'counter-fries')"
-                        id="plus-fries">+</button>
+                    <button onclick="updateQuantity('Hamburguesa del mes', -1, 'counter-mes')" id="minus-mes">-</button>
+                    <span id="counter-mes" class="product-count">0</span>
+                    <button
+                        onclick="addToCart('Hamburguesa del mes', 400, 'counter-mes') && updateQuantity('Hamburguesa del mes', 1, 'counter-mes')"
+                        id="plus-mes">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>Hood</h3>
                 <img src="imagenes/hood2.jpg" alt="Hood">
                 <span>$340</span>
-                <button class="btn" onclick="addToCart('Hood', 340, 'counter-classic')">Añadir al carrito</button>
+                <button class="btn" onclick="addToCart('Hood', 340, 'counter-hood')">Añadir al carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Hood', -1, 'counter-classic')" id="minus-classic">-</button>
-                    <span id="counter-classic" class="product-count">0</span>
-                    <button onclick="updateQuantity('Hood', 1, 'counter-classic')" id="plus-classic">+</button>
+                    <button onclick="updateQuantity('Hood', -1, 'counter-hood')" id="minus-hood">-</button>
+                    <span id="counter-hood" class="product-count">0</span>
+                    <button onclick="updateQuantity('Hood', 1, 'counter-hood')" id="plus-hood">+</button>
                 </div>
             </div>
             <div class="product">
@@ -471,22 +479,15 @@
             </div>
 
         </div>
-
-        <div class="cart">
-            <h2>Carrito</h2>
-            <div class="cart-info">
-                <span>Artículos en el carrito:</span>
-                <span id="item-count" class="item-count">0</span>
-            </div>
-            <ul id="cart-items"></ul>
-            <p id="cart-total-text">Total: $<span id="cart-total">0.00</span></p>
-        </div>
     </div>
 
     <script>
         let cart = [];
 
         function addToCart(productName, price, counterId) {
+            console.log('============================== Product Name: ' + productName);
+            console.log('============================== Price: ' + price);
+            console.log('============================== Counter ID: ' + counterId);
             const productIndex = cart.findIndex(item => item.name === productName);
 
             if (productIndex !== -1) {
@@ -503,6 +504,9 @@
         }
 
         function updateQuantity(productName, quantityChange, counterId) {
+            console.log('============================== Product Name: ' + productName);
+            console.log('============================== Quantity Change: ' + quantityChange);
+            console.log('============================== Counter ID: ' + counterId);
             const productIndex = cart.findIndex(item => item.name === productName);
             if (productIndex !== -1) {
                 // Actualizar cantidad de productos y evitar valores negativos
@@ -540,3 +544,8 @@
 </body>
 
 </html>
+
+<!-- CHECKLIST
+    - Cambiar todos los ids de cada producto Y contadores
+    - Agregar la funcion "onclick="addToCart('Hamburguesa del mes', 400, 'counter-mes') && " en todos los productos en el simbolo del +
+     -->
