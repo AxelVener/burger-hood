@@ -68,6 +68,7 @@
             border-radius: 4px;
             cursor: pointer;
             font-size: 1rem;
+            margin-top: 2rem;
             margin-bottom: 1rem;
         }
 
@@ -217,6 +218,20 @@
         <h2>Menú</h2>
         <div id="product-list">
             <div class="product">
+                <h3>Carne extra</h3>
+                <img src="imagenes/carneextra.png" alt="Carne extra">
+                <span>$90</span>
+                <button class="btn" onclick="addToCart('Carne extra', 90, 'counter-carneextra')">Añadir al
+                    carrito</button>
+                <div class="counter-controls">
+                    <button onclick="updateQuantity('Carne extra', -1, 'counter-carneextra')" id="minus-mes">-</button>
+                    <span id="counter-carneextra" class="product-count">0</span>
+                    <button
+                        onclick="addToCart('Carne extra', 90, 'counter-carneextra') && updateQuantity('Carne extra', 1, 'counter-carneextra')"
+                        id="plus-carneextra">+</button>
+                </div>
+            </div>
+            <div class="product">
                 <h3>Hamburguesa del mes</h3>
                 <img src="imagenes/Philly.jpg" alt="Hamburguesa del mes">
                 <span>$400</span>
@@ -232,249 +247,249 @@
             </div>
             <div class="product">
                 <h3>Hood</h3>
-                <img src="imagenes/hood2.jpg" alt="Hood">
-                <span>$340</span>
-                <button class="btn" onclick="addToCart('Hood', 340, 'counter-hood')">Añadir al carrito</button>
+                <img src="imagenes/Hood2.jpg" alt="Hood">
+                <span>$350</span>
+                <button class="btn" onclick="addToCart('Hood', 350, 'counter-hood')">Añadir al carrito</button>
                 <div class="counter-controls">
                     <button onclick="updateQuantity('Hood', -1, 'counter-hood')" id="minus-hood">-</button>
                     <span id="counter-hood" class="product-count">0</span>
-                    <button onclick="updateQuantity('Hood', 1, 'counter-hood')" id="plus-hood">+</button>
+                    <button onclick="addToCart('Hood', 350, 'counter-hood') && updateQuantity('Hood', 1, 'counter-hood')" id="plus-hood">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>Yankee</h3>
                 <img src="imagenes/Yankee.jpg" alt="Yankee">
-                <span>$320</span>
-                <button class="btn" onclick="addToCart('Yankee', 320, 'counter-double')">Añadir al carrito</button>
+                <span>$330</span>
+                <button class="btn" onclick="addToCart('Yankee', 330, 'counter-yankee')">Añadir al carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Yankee', -1, 'counter-double')" id="minus-double">-</button>
-                    <span id="counter-double" class="product-count">0</span>
-                    <button onclick="updateQuantity('Yankee', 1, 'counter-double')" id="plus-double">+</button>
+                    <button onclick="updateQuantity('Yankee', -1, 'counter-yankee')" id="minus-yankee">-</button>
+                    <span id="counter-yankee" class="product-count">0</span>
+                    <button onclick="addToCart('Yankee', 330, 'counter-yankee') && updateQuantity('Yankee', 1, 'counter-yankee')" id="plus-yankee">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>A & C</h3>
                 <img src="imagenes/Ayc.jpg" alt="A & C">
                 <span>$310</span>
-                <button class="btn" onclick="addToCart('A & C', 310, 'counter-fries')">Añadir al carrito</button>
+                <button class="btn" onclick="addToCart('A & C', 310, 'counter-ayc')">Añadir al carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('A & C', -1, 'counter-fries')" id="minus-fries">-</button>
-                    <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('A & C', 1, 'counter-fries')" id="plus-fries">+</button>
+                    <button onclick="updateQuantity('A & C', -1, 'counter-ayc')" id="minus-fries">-</button>
+                    <span id="counter-ayc" class="product-count">0</span>
+                    <button onclick="addToCart('A & C', 310, 'counter-ayc') && updateQuantity('A & C', 1, 'counter-ayc')" id="plus-ayc">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>Cheese</h3>
                 <img src="imagenes/ChesseBurger.jpg" alt="Cheese">
-                <span>$330</span>
-                <button class="btn" onclick="addToCart('Cheese', 330, 'counter-fries')">Añadir al carrito</button>
+                <span>$340</span>
+                <button class="btn" onclick="addToCart('Cheese', 340, 'counter-cheese')">Añadir al carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Cheese', -1, 'counter-fries')" id="minus-fries">-</button>
-                    <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('Cheese', 1, 'counter-fries')" id="plus-fries">+</button>
+                    <button onclick="updateQuantity('Cheese', -1, 'counter-cheese')" id="minus-cheese">-</button>
+                    <span id="counter-cheese" class="product-count">0</span>
+                    <button onclick="addToCart('Cheese', 340, 'counter-cheese') && updateQuantity('Cheese', 1, 'counter-cheese')" id="plus-cheese">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>Oklahoma</h3>
                 <img src="imagenes/oklahoma-2.jpg" alt="Oklahoma">
-                <span>$400</span>
-                <button class="btn" onclick="addToCart('Oklahoma', 400, 'counter-fries')">Añadir al carrito</button>
+                <span>$410</span>
+                <button class="btn" onclick="addToCart('Oklahoma', 410, 'counter-oklahoma')">Añadir al carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Oklahoma', -1, 'counter-fries')" id="minus-fries">-</button>
-                    <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('Oklahoma', 1, 'counter-fries')" id="plus-fries">+</button>
+                    <button onclick="updateQuantity('Oklahoma', -1, 'counter-oklahoma')" id="minus-oklahoma">-</button>
+                    <span id="counter-oklahoma" class="product-count">0</span>
+                    <button onclick="addToCart('Oklahoma', 410, 'counter-oklahoma') && updateQuantity('Oklahoma', 1, 'counter-oklahoma')" id="plus-oklahoma">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>Monster</h3>
                 <img src="imagenes/Monster.jpg" alt="Monster">
-                <span>$380</span>
-                <button class="btn" onclick="addToCart('Monster', 380, 'counter-fries')">Añadir al carrito</button>
+                <span>$390</span>
+                <button class="btn" onclick="addToCart('Monster', 390, 'counter-monster')">Añadir al carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Monster', -1, 'counter-fries')" id="minus-fries">-</button>
-                    <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('Monster', 1, 'counter-fries')" id="plus-fries">+</button>
+                    <button onclick="updateQuantity('Monster', -1, 'counter-monster')" id="minus-monster">-</button>
+                    <span id="counter-monster" class="product-count">0</span>
+                    <button onclick="addToCart('Monster', 390, 'counter-monster') && updateQuantity('Monster', 1, 'counter-monster')" id="plus-monster">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>Patty Melt</h3>
-                <img src="imagenes/Patty.jpg" alt="Papas Fritas">
+                <img src="imagenes/Patty.jpg" alt="Patty Melt">
                 <span>$420</span>
-                <button class="btn" onclick="addToCart('Patty Melt', 420, 'counter-fries')">Añadir al carrito</button>
+                <button class="btn" onclick="addToCart('Patty Melt', 420, 'counter-patty')">Añadir al carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Patty Melt', -1, 'counter-fries')" id="minus-fries">-</button>
-                    <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('Patty Melt', 1, 'counter-fries')" id="plus-fries">+</button>
+                    <button onclick="updateQuantity('Patty Melt', -1, 'counter-patty')" id="minus-patty">-</button>
+                    <span id="counter-patty" class="product-count">0</span>
+                    <button onclick="addToCart('Patty Melt', 420, 'counter-patty') && updateQuantity('Patty Melt', 1, 'counter-patty')" id="plus-patty">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>Pulled Pork</h3>
                 <img src="imagenes/pulled-1.jpg" alt="Pulled Pork">
-                <span>$280</span>
-                <button class="btn" onclick="addToCart('Pulled Pork', 280, 'counter-fries')">Añadir al carrito</button>
+                <span>$290</span>
+                <button class="btn" onclick="addToCart('Pulled Pork', 290, 'counter-pulledpork')">Añadir al carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Pulled Pork', -1, 'counter-fries')" id="minus-fries">-</button>
-                    <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('Pulled Pork', 1, 'counter-fries')" id="plus-fries">+</button>
+                    <button onclick="updateQuantity('Pulled Pork', -1, 'counter-pulledpork')" id="minus-pulledpork">-</button>
+                    <span id="counter-pulledpork" class="product-count">0</span>
+                    <button onclick="addToCart('Pulled Pork', 290, 'counter-pulledpork') && updateQuantity('Pulled Pork', 1, 'counter-pulledpork')" id="plus-pulledpork">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>Hueverly</h3>
                 <img src="imagenes/Hueverly-2.jpg" alt="Hueverly">
-                <span>$380</span>
-                <button class="btn" onclick="addToCart('Hueverly', 380, 'counter-fries')">Añadir al carrito</button>
+                <span>$390</span>
+                <button class="btn" onclick="addToCart('Hueverly', 390, 'counter-hueverly')">Añadir al carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Hueverly', -1, 'counter-fries')" id="minus-fries">-</button>
-                    <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('Hueverly', 1, 'counter-fries')" id="plus-fries">+</button>
+                    <button onclick="updateQuantity('Hueverly', -1, 'counter-hueverly')" id="minus-hueverly">-</button>
+                    <span id="counter-hueverly" class="product-count">0</span>
+                    <button onclick="addToCart('Hueverly', 390, 'counter-hueverly') && updateQuantity('Hueverly', 1, 'counter-hueverly')" id="plus-hueverly">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>Red Hot</h3>
                 <img src="imagenes/papas.jpeg" alt="Red Hot">
                 <span>$310</span>
-                <button class="btn" onclick="addToCart('Red Hot', 310, 'counter-fries')">Añadir al carrito</button>
+                <button class="btn" onclick="addToCart('Red Hot', 310, 'counter-redhot')">Añadir al carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Red Hot', -1, 'counter-fries')" id="minus-fries">-</button>
-                    <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('Red Hot', 1, 'counter-fries')" id="plus-fries">+</button>
+                    <button onclick="updateQuantity('Red Hot', -1, 'counter-redhot')" id="minus-redhot">-</button>
+                    <span id="counter-redhot" class="product-count">0</span>
+                    <button onclick="addToCart('Red Hot', 310, 'counter-redhot') && updateQuantity('Red Hot', 1, 'counter-redhot')" id="plus-redhot">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>West</h3>
                 <img src="imagenes/West.jpeg" alt="West">
-                <span>$350</span>
-                <button class="btn" onclick="addToCart('West', 350, 'counter-fries')">Añadir al carrito</button>
+                <span>$360</span>
+                <button class="btn" onclick="addToCart('West', 360, 'counter-west')">Añadir al carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('West', -1, 'counter-fries')" id="minus-fries">-</button>
-                    <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('West', 1, 'counter-fries')" id="plus-fries">+</button>
+                    <button onclick="updateQuantity('West', -1, 'counter-west')" id="minus-west">-</button>
+                    <span id="counter-west" class="product-count">0</span>
+                    <button onclick="addToCart('West', 360, 'counter-west') && updateQuantity('West', 1, 'counter-west')" id="plus-west">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>Veggie</h3>
                 <img src="imagenes/veggie.jpg" alt="Veggie">
-                <span>$270</span>
-                <button class="btn" onclick="addToCart('Veggie', 270, 'counter-fries')">Añadir al carrito</button>
+                <span>$300</span>
+                <button class="btn" onclick="addToCart('Veggie', 300, 'counter-veggie')">Añadir al carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Veggie', -1, 'counter-fries')" id="minus-fries">-</button>
-                    <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('Veggie', 1, 'counter-fries')" id="plus-fries">+</button>
+                    <button onclick="updateQuantity('Veggie', -1, 'counter-veggie')" id="minus-veggie">-</button>
+                    <span id="counter-veggie" class="product-count">0</span>
+                    <button onclick="addToCart('Veggie', 300, 'counter-veggie') && updateQuantity('Veggie', 1, 'counter-veggie')" id="plus-veggie">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>Kid</h3>
                 <img src="imagenes/Kid.jpg" alt="Kid">
-                <span>$220</span>
-                <button class="btn" onclick="addToCart('Kid', 220, 'counter-fries')">Añadir al carrito</button>
+                <span>$240</span>
+                <button class="btn" onclick="addToCart('Kid', 240, 'counter-kid')">Añadir al carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Kid', -1, 'counter-fries')" id="minus-fries">-</button>
-                    <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('Kid', 1, 'counter-fries')" id="plus-fries">+</button>
+                    <button onclick="updateQuantity('Kid', -1, 'counter-kid')" id="minus-kid">-</button>
+                    <span id="counter-kid" class="product-count">0</span>
+                    <button onclick="addToCart('Kid', 240, 'counter-kid') && updateQuantity('Kid', 1, 'counter-kid')" id="plus-kid">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>Papas Chicas</h3>
                 <img src="imagenes/papas.jpeg" alt="Papas Chicas">
-                <span>$75</span>
-                <button class="btn" onclick="addToCart('Papas Chicas', 75, 'counter-fries')">Añadir al carrito</button>
+                <span>$80</span>
+                <button class="btn" onclick="addToCart('Papas Chicas', 80, 'counter-papaschi')">Añadir al carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Papas Chicas', -1, 'counter-fries')" id="minus-fries">-</button>
-                    <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('Papas Chicas', 1, 'counter-fries')" id="plus-fries">+</button>
+                    <button onclick="updateQuantity('Papas Chicas', -1, 'counter-papaschi')" id="minus-papaschi">-</button>
+                    <span id="counter-papaschi" class="product-count">0</span>
+                    <button onclick="addToCart('Papas Chicas', 80, 'counter-papaschi') && updateQuantity('Papas Chicas', 1, 'counter-papaschi')" id="plus-papaschi">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>Papas Grandes</h3>
                 <img src="imagenes/papas.jpeg" alt="Papas Grandes">
-                <span>$180</span>
-                <button class="btn" onclick="addToCart('Papas Grandes', 180, 'counter-fries')">Añadir al
+                <span>$200</span>
+                <button class="btn" onclick="addToCart('Papas Grandes', 200, 'counter-papasgran')">Añadir al
                     carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Papas Grandes', -1, 'counter-fries')" id="minus-fries">-</button>
-                    <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('Papas Grandes', 1, 'counter-fries')" id="plus-fries">+</button>
+                    <button onclick="updateQuantity('Papas Grandes', -1, 'counter-papasgran')" id="minus-papasgran">-</button>
+                    <span id="counter-papasgran" class="product-count">0</span>
+                    <button onclick="addToCart('Papas Grandes', 200, 'counter-papasgran') && updateQuantity('Papas Grandes', 1, 'counter-papasgran')" id="plus-papasgran">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>Papas Cheddar</h3>
                 <img src="imagenes/Papas-cheddar.jpg" alt="Papas Cheddar">
-                <span>$280</span>
-                <button class="btn" onclick="addToCart('Papas Cheddar', 280, 'counter-fries')">Añadir al
+                <span>$300</span>
+                <button class="btn" onclick="addToCart('Papas Cheddar', 300, 'counter-papasche')">Añadir al
                     carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Papas Cheddar', -1, 'counter-fries')" id="minus-fries">-</button>
-                    <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('Papas Cheddar', 1, 'counter-fries')" id="plus-fries">+</button>
+                    <button onclick="updateQuantity('Papas Cheddar', -1, 'counter-papasche')" id="minus-papasche">-</button>
+                    <span id="counter-papasche" class="product-count">0</span>
+                    <button onclick="addToCart('Papas Cheddar', 300, 'counter-papasche') && updateQuantity('Papas Cheddar', 1, 'counter-papasche')" id="plus-papasche">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>Papas Bunker</h3>
                 <img src="imagenes/papas-bunker.jpg" alt="Papas Bunker">
-                <span>$320</span>
-                <button class="btn" onclick="addToCart('Papas Bunker', 320, 'counter-fries')">Añadir al carrito</button>
+                <span>$330</span>
+                <button class="btn" onclick="addToCart('Papas Bunker', 330, 'counter-papasbun')">Añadir al carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Papas Bunker', -1, 'counter-fries')" id="minus-fries">-</button>
-                    <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('Papas Bunker', 1, 'counter-fries')" id="plus-fries">+</button>
+                    <button onclick="updateQuantity('Papas Bunker', -1, 'counter-papasbun')" id="minus-papasbun">-</button>
+                    <span id="counter-papasbun" class="product-count">0</span>
+                    <button onclick="addToCart('Papas Bunker', 330, 'counter-papasbun') && updateQuantity('Papas Bunker', 1, 'counter-papasbun')" id="plus-papasbun">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>Papas Pulled</h3>
                 <img src="imagenes/pulled-1.jpg" alt="Papas Pulled">
-                <span>$280</span>
-                <button class="btn" onclick="addToCart('Papas Pulled', 280, 'counter-fries')">Añadir al carrito</button>
+                <span>$290</span>
+                <button class="btn" onclick="addToCart('Papas Pulled', 290, 'counter-papaspull')">Añadir al carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Papas Pulled', -1, 'counter-fries')" id="minus-fries">-</button>
-                    <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('Papas Pulled', 1, 'counter-fries')" id="plus-fries">+</button>
+                    <button onclick="updateQuantity('Papas Pulled', -1, 'counter-papaspull')" id="minus-papaspull">-</button>
+                    <span id="counter-papaspull" class="product-count">0</span>
+                    <button onclick="addToCart('Papas Pulled', 290, 'counter-papaspull') && updateQuantity('Papas Pulled', 1, 'counter-papaspull')" id="plus-papaspull">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>Combo Chill</h3>
                 <img src="imagenes/Combo1.jpg" alt="Combo Chill">
                 <span>$799</span>
-                <button class="btn" onclick="addToCart('Combo Chill', 799, 'counter-fries')">Añadir al carrito</button>
+                <button class="btn" onclick="addToCart('Combo Chill', 799, 'counter-combouno')">Añadir al carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Combo Chill', -1, 'counter-fries')" id="minus-fries">-</button>
-                    <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('Combo Chill', 1, 'counter-fries')" id="plus-fries">+</button>
+                    <button onclick="updateQuantity('Combo Chill', -1, 'counter-combouno')" id="minus-combouno">-</button>
+                    <span id="counter-combouno" class="product-count">0</span>
+                    <button onclick="addToCart('Combo Chill', 799, 'counter-combouno') && updateQuantity('Combo Chill', 1, 'counter-combouno')" id="plus-combouno">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>Combo Boom</h3>
                 <img src="imagenes/Combo2.jpg" alt="Combo Boom">
                 <span>$999</span>
-                <button class="btn" onclick="addToCart('Combo Boom', 999, 'counter-fries')">Añadir al carrito</button>
+                <button class="btn" onclick="addToCart('Combo Boom', 999, 'counter-combodos')">Añadir al carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Combo Boom', -1, 'counter-fries')" id="minus-fries">-</button>
-                    <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('Combo Boom', 1, 'counter-fries')" id="plus-fries">+</button>
+                    <button onclick="updateQuantity('Combo Boom', -1, 'counter-combodos')" id="minus-combodos">-</button>
+                    <span id="counter-combodos" class="product-count">0</span>
+                    <button onclick="addToCart('Combo Boom', 999, 'counter-combodos') && updateQuantity('Combo Boom', 1, 'counter-combodos')" id="plus-combodos">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>Refresco 600ml</h3>
                 <img src="imagenes/papas.jpeg" alt="Refresco 600ml">
                 <span>$120</span>
-                <button class="btn" onclick="addToCart('Refresco 600ml', 120, 'counter-fries')">Añadir al
+                <button class="btn" onclick="addToCart('Refresco 600ml', 120, 'counter-refresco600')">Añadir al
                     carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Refresco 600ml', -1, 'counter-fries')" id="minus-fries">-</button>
-                    <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('Refresco 600ml', 1, 'counter-fries')" id="plus-fries">+</button>
+                    <button onclick="updateQuantity('Refresco 600ml', -1, 'counter-refresco600')" id="minus-refresco600">-</button>
+                    <span id="counter-refresco600" class="product-count">0</span>
+                    <button onclick="addToCart('Refresco 600ml', 120, 'counter-refresco600') && updateQuantity('Refresco 600ml', 1, 'counter-refresco600')" id="plus-refresco600">+</button>
                 </div>
             </div>
             <div class="product">
                 <h3>Cerveza Artesanal</h3>
                 <img src="imagenes/papas.jpeg" alt="Cerveza Artesanal">
                 <span>$180</span>
-                <button class="btn" onclick="addToCart('Cerveza Artesanal', 180, 'counter-fries')">Añadir al
+                <button class="btn" onclick="addToCart('Cerveza Artesanal', 180, 'counter-cerveza')">Añadir al
                     carrito</button>
                 <div class="counter-controls">
-                    <button onclick="updateQuantity('Cerveza Artesanal', -1, 'counter-fries')"
+                    <button onclick="updateQuantity('Cerveza Artesanal', -1, 'counter-cerveza')"
                         id="minus-fries">-</button>
-                    <span id="counter-fries" class="product-count">0</span>
-                    <button onclick="updateQuantity('Cerveza Artesanal', 1, 'counter-fries')" id="plus-fries">+</button>
+                    <span id="counter-cerveza" class="product-count">0</span>
+                    <button onclick="addToCart('Cerveza Artesanal', 180, 'counter-cerveza') && updateQuantity('Cerveza Artesanal', 1, 'counter-cerveza')" id="plus-cerveza">+</button>
                 </div>
             </div>
 
